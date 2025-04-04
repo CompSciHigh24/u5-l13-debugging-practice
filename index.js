@@ -27,6 +27,12 @@ app.get("/menu", (req, res) => {
 });
 */
 
+// Go to script.js for Task 3, verify both work before moving on!
+
+
+// Task 4: Debug POST route
+
+/*
 app.post("/menu/new", async (req, res) => {
   const newItem = await Menu({
     name: req.body.name,
@@ -36,7 +42,13 @@ app.post("/menu/new", async (req, res) => {
   })
   res.json(newItem);
 });
+*/
 
+// Go to script.js for Task 5, verify both work before moving on!
+
+// Task 6: Debug PATCH route
+
+/*
 app.update("/menu/update/:name", async (req, res) => {
   const updatedItem = await Menu.findOneAndUpdate(
     { name: req.params.title },
@@ -45,16 +57,24 @@ app.update("/menu/update/:name", async (req, res) => {
   );
   res.json(updatedItem);
 });
+*/
 
+// Go to script.js for Task 7, verify both work before moving on!
+
+// Task 8: Debug DELETE route
+
+/*
 app.delete("/menu/delete/:name", async (req, res) => {
   const deletedItem = await Menu.findOne({
     name: req.params.name,
   });
   res.json(deletedItem);
 });
+*/
 
+// Go to script.js for the final Task #9!
 
-// No bugs below! Leave alone
+// No bugs below! Leave it alone!
 async function startServer() {
     await mongoose.connect(
       "mongodb+srv://SE12:CSH2025@cluster12.3ffmh.mongodb.net/resturants?retryWrites=true&w=majority&appName=Cluster12"
