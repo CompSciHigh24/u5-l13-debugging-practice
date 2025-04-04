@@ -10,13 +10,13 @@ app.use((req, res, next) => {
 })
 
 const menuSchema = new mongoose.schema({
-  name: { type: String, required: true },
+  name: { type: String, require: true },
   cost: { type: Number },
   rating: { type: Number, default: 0 },
-  review: { type: String },
+  review: { type: string },
 });
 
-const Menu = mongoose.Model("Menu", menuschema, "Menus");
+const Menu = mongoose.Model("Menu", menu, "Menus");
 
 // Task 2: Debug GET route
 
