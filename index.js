@@ -1,5 +1,4 @@
-const express = require("express");
-const mongoose = require("mongoose");
+// Task 1: Debug Server Set up, Models, and Schema
 
 const app = express();
 
@@ -19,10 +18,14 @@ const menuSchema = new mongoose.schema({
 
 const Menu = mongoose.Model("Menu", menuschema, "Menus");
 
+// Task 2: Debug GET route
+
+/*
 app.get("/menu", (req, res) => {
   const allItems = await menu.find({});
   res.json(allItems);
 });
+*/
 
 app.post("/menu/new", async (req, res) => {
   const newItem = await Menu({
@@ -51,6 +54,7 @@ app.delete("/menu/delete/:name", async (req, res) => {
 });
 
 
+// No bugs below! Leave alone
 async function startServer() {
     await mongoose.connect(
       "mongodb+srv://SE12:CSH2025@cluster12.3ffmh.mongodb.net/resturants?retryWrites=true&w=majority&appName=Cluster12"
@@ -58,6 +62,6 @@ async function startServer() {
     app.listen(3000, () => {
       console.log("Server Starting");
     });
-  }
+}
   
   startServer();
