@@ -1,5 +1,7 @@
-// add YOUR baseURL and make sure it's public
-const baseURL = "https://turbo-train-q79vprg6vw69f47vj-3000.app.github.dev";
+// Have both terminals set up, make sure to make the server public!
+
+// Add your base URL that will be used to build the paths
+const baseURL = "...";
 
 // Get all menu items
 async function getAllMenuItems() {
